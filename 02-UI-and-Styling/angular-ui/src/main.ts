@@ -1,8 +1,7 @@
+import 'zone.js'; // ◄ เพิ่มบรรทัดนี้ไว้ที่แถวแรกสุดของไฟล์!
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
-// แก้จุดนี้: เปลี่ยนจาก { App } เป็น { AppComponent }
-import { AppComponent } from './app/app'; 
+import { AppComponent } from './app/app.ts'; // หรือชื่อไฟล์หลักของคุณ
 
-// แก้จุดนี้: เปลี่ยนจาก App เป็น AppComponent
-bootstrapApplication(AppComponent, appConfig) 
+bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));

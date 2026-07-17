@@ -1,17 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
-// เปลี่ยนเส้นทางจากเดิม ให้ชี้ไปที่โฟลเดอร์และไฟล์ที่ชื่อ header ตรงๆ
-import { HeaderComponent } from './components/header/header';
- 
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent], 
+  imports: [FormsModule], // ◄ เอาพวก RouterOutlet หรือ Component อื่นออกให้เกลี้ยง
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class AppComponent {
-  title = 'angular-ui';
+  text: string = 'Hello, Angular! Aj.M';
 }

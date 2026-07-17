@@ -1,11 +1,14 @@
-<!-- แถบเมนูบนสุดที่เราทำกันไว้ -->
-<app-header></app-header>
+<div class="p-8 max-w-md mx-auto mt-10 bg-white rounded-xl shadow-md border border-gray-100 text-center">
+  <!-- ช่องรับข้อความ -->
+  <input 
+    type="text" 
+    [(ngModel)]="text" 
+    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
+    placeholder="พิมพ์ข้อความที่นี่..."
+  >
 
-<!-- วางโค้ดการ์ด Welcome ต่อท้ายลงมาตรงนี้ -->
-<div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4 mt-8">
-  <div class="text-3xl font-bold mb-4">Welcome to Your Custom Agent</div>
-  <p class="text-gray-500">Hello world!</p>
+  <!-- ข้อความแสดงผลด้านล่างที่จะเปลี่ยนตามทันที -->
+  <p class="mt-6 text-lg font-medium text-gray-800">
+    Text : {{ text }}
+  </p>
 </div>
-
-<!-- คงแท็กนี้ไว้สำหรับระบบเปิดหน้าเว็บอื่นๆ ในอนาคต -->
-<router-outlet></router-outlet>
