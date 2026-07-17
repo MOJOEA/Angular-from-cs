@@ -35,7 +35,7 @@ function calTax(category: string, price: number) {
     }
 
     priceBeforeTax = price / (1 + rateNumber);
-        tax = price - priceBeforeTax;
+    tax = price - priceBeforeTax;
     priceBeforeTax = Number(priceBeforeTax.toFixed(2));
     tax = Number(tax.toFixed(2));
 
