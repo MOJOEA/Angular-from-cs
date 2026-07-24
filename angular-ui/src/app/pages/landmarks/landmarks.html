@@ -1,0 +1,46 @@
+<div class="m-4 gap-4">
+  <div class="flex flex-row flex-wrap items-center gap-2 m-4 justify-center">
+    id: <input #id type="text" class="input outline-0 mr-2 w-30" />
+    <button class="btn btn-primary outline-0" (click)="findOne(id)">Find</button>
+
+    name: <input #name type="text" class="input outline-0 mr-2 w-80" />
+    <button class="btn btn-primary outline-0" (click)="findByName(name)">Find</button>
+
+    country:<select #countrySelect class="select outline-0" (change)="findByCountry(countrySelect)">
+      <option value="" disabled selected>เลือกประเทศที่อยากไปเที่ยว</option>
+      @for (option of options; track $index) {
+        <option value="{{ option }}">{{ option }}</option>
+      }
+    </select>
+
+    <button class="btn btn-error text-white outline-0 ml-2 w-32" (click)="loadLandmarks()">Reset</button>
+  </div>
+
+
+  @if (landmarkData().length > 0) {
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mt-4">
+      @for (landmark of landmarkData(); track $index) {
+        <div class="card card-side bg-base-100 shadow-xl w-full">
+          <!-- ฝั่งซ้าย: รูปภาพสถานที่ท่องเที่ยว ล็อกสัดส่วนด้วย w-1/3 หรือ w-96 -->
+          <figure class="w-1/3 min-w-[200px]">
+            <img [src]="landmark.url" alt="Landmark Image" class="w-full h-full object-cover" />
+          </figure>
+          
+          <!-- ฝั่งขวา: ข้อความและรายละเอียด -->
+          <div class="card-body w-2/3">
+            <h2 class="card-title text-blue">{{ landmark.name }}</h2>
+            <span class="text-sm text-gray-500 block -mt-2">{{ landmark.country }}</span> 
+            <p class="mt-2 text-gray-700">{{ landmark.detail }}</p>
+          </div>
+        </div>
+      }
+    </div>
+
+  } @else {
+    <div class="alert alert-warning mt-4">
+      <div>
+        <span>ไม่พบข้อมูลสถานที่ท่องเที่ยว กรุณาลองใหม่อีกครั้ง</span>
+      </div>
+    </div>
+  }
+</div>

@@ -8,10 +8,11 @@ import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import { DataBinding } from './pages/data-binding/data-binding';
 import { ShowData } from './pages/show-data/show-data';
+import { Landmarks } from './pages/landmarks/landmarks';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, FontAwesomeModule, DataBinding, ShowData],
+  imports: [RouterOutlet, Header, FontAwesomeModule, DataBinding, ShowData, Landmarks],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
