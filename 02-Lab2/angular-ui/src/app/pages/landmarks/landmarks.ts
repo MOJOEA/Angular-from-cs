@@ -40,6 +40,7 @@ export class Landmarks {
     this.landmarkData.set(filteredLandmarks); 
   }
 
+  // ฟังก์ชันสำหรับค้นหาสถานที่ท่องเที่ยวตามประเทศ
   findByCountry(country: HTMLSelectElement) {
     const filteredLandmarks = this.landmarks.filter((l) => l.country === country.value);
     console.log(filteredLandmarks);   
