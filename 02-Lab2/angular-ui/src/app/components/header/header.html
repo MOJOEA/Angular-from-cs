@@ -1,20 +1,38 @@
-<div class="navbar bg-base-100 shadow-sm">
-  <div class="flex w-full">
-    <div class="flex-col items-center gap-2 px-4 w-full">
-      <div class="avatar">
-        <div class="w-10 rounded-full">
-          <img src="https://www.svgrepo.com/show/353396/angular-icon.svg" />
-        </div>
+<header class="bg-zinc-950 text-zinc-100 shadow-xl border-b border-zinc-800 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- LOGO / BRAND -->
+      <div class="flex-shrink-0 flex items-center space-x-2">
+        <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent">
+          ANGULAR LAB
+        </span>
       </div>
-      <div class="flex flex-row justify-between">
-        <div class="flex flex-row items-center gap-4">
-          <span>Angular Web</span>
-          <a class="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div>
-        <a class="btn btn-ghost text-xl">Login</a>
-        </div>
-      </div>
+
+      <!-- NAVIGATION LINKS -->
+      <nav class="hidden md:flex space-x-1">
+        <a routerLink="/data-binding" 
+           routerLinkActive="bg-zinc-800 text-amber-400 font-medium" 
+           class="px-4 py-2 rounded-lg text-sm font-normal text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition-all duration-200">
+          Data Binding
+        </a>
+        <a routerLink="/show-data" 
+           routerLinkActive="bg-zinc-800 text-amber-400 font-medium" 
+           class="px-4 py-2 rounded-lg text-sm font-normal text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition-all duration-200">
+          Show Data
+        </a>
+        <a routerLink="/HW1" 
+           routerLinkActive="bg-gradient-to-r from-amber-500 to-red-500 text-white font-medium shadow-md shadow-amber-500/10" 
+           class="px-4 py-2 rounded-lg text-sm font-normal text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition-all duration-200">
+          HW1: Landmarks
+        </a>
+        <a routerLink="/HW2" 
+           routerLinkActive="bg-gradient-to-r from-amber-500 to-red-500 text-white font-medium shadow-md shadow-amber-500/10" 
+           class="px-4 py-2 rounded-lg text-sm font-normal text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition-all duration-200">
+          HW2: Movies
+        </a>
+      </nav>
+
     </div>
   </div>
-</div>
+</header>

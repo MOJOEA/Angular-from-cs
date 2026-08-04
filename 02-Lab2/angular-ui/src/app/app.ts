@@ -8,7 +8,7 @@ import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import { DataBinding } from './pages/data-binding/data-binding';
 import { ShowData } from './pages/show-data/show-data';
-import { Landmarks } from './pages/landmarks/landmarks';
+import { Landmarks } from './pages/HW1/landmarks';
 
 @Component({
   selector: 'app-root',
