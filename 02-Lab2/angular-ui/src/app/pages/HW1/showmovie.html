@@ -1,0 +1,72 @@
+<div class="min-h-screen w-full pt-6 pb-16 bg-[#282727] text-[#111111] font-sans">
+  <div class="max-w-5xl mx-auto px-4 sm:px-4">
+
+    <!-- 1. CHARACTER SECTION (IMAGE + TEXT) -->
+    <div class="flex flex-col sm:flex-row mb-4 gap-6">
+      <img 
+        [src]="movieData.posterImage"
+        alt="{{ movieData.name }}"
+        class="w-[300px] h-[190px] object-cover flex-shrink-0 mx-auto sm:mx-0"
+      />
+      <div class="flex-1 ml-12">
+        <h2 class="text-[20px] font-normal mb-4 text-white">
+          {{ movieData.name }}
+        </h2>
+        <hr class="mb-4 border-zinc-600" />
+        <h3 class="text-1xl font-normal mb-2 text-white">
+          Character
+        </h3>
+        <p class="text-[10.2px] leading-relaxed text-justify opacity-90 text-white">
+          {{ movieData.characterDescription }}
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. PERSONALITY SECTION (YOUTUBE + TEXT) -->
+    <div class="flex flex-col sm:flex-row mb-2 gap-6 ">
+      <iframe 
+        [src]="videoUrl"
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="w-[450px] h-[250px] border-0 flex-shrink-0 mx-auto sm:mx-0">
+      </iframe>
+      <div class="flex-1 ml-12 ">
+        <h3 class="text-1xl font-normal mb-2 text-white">
+          Personality
+        </h3>
+        <p class="text-[10.2px] leading-relaxed text-justify opacity-90 text-white">
+          {{ movieData.personalityDescription }}
+        </p>
+      </div>
+    </div>
+
+    <hr class="mb-2 mt-5 border-zinc-600" />
+
+    <!-- 3. COMMENT SECTION -->
+    <div class="w-full">
+      <label class="block text-sm mb-2 text-white">
+        Comment
+      </label>
+      
+      <textarea
+        rows="4"
+        placeholder="What do you feel about this?"
+        class="w-full h-[100px] p-3 text-sm rounded-[8px] border outline-none resize-none transition-colors duration-200 bg-[#282727] border-white text-white placeholder-white"></textarea>
+
+      <div class="flex justify-between items-center mt-3">
+        <div class="flex gap-0.5 text-zinc-600">
+          <fa-icon *ngFor="let heart of [].constructor(5)" [icon]="faHeart" class="text-sm cursor-pointer"></fa-icon>
+        </div>
+        
+        <button 
+          class="bg-[#353535] hover:bg-gray-500 text-white text-xs font-medium py-1.5 px-8 rounded shadow transition-colors duration-200">
+          SEND
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

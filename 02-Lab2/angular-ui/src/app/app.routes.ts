@@ -2,8 +2,8 @@ import { Routes } from '@angular/router';
 
 import { DataBinding } from './pages/data-binding/data-binding';
 import { ShowData } from './pages/show-data/show-data';
-import { Landmarks } from './pages/HW1/landmarks';
-import { Showmovie } from './pages/HW2/showmovie';
+import { Landmarks } from './pages/HW2/landmarks';
+import { Showmovie } from './pages/HW1/showmovie';
 
 export const routes: Routes = [
     {path: '', component: Landmarks},
