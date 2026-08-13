@@ -6,12 +6,15 @@ import { Pagenotfound } from './pages/pagenotfound/pagenotfound';
 
 import { List } from './pages/member/list/list';
 import { Profile } from './pages/member/profile/profile';
+import { Test } from './pages/member/test/test';
 
 export const routes: Routes = [
   { path: '', component: Main },
-  { path: 'member', component: Member, children: [
-    { path: 'list', component: List },
-    { path: 'profile', component: Profile }
-  ]},
+  { path: 'member', component: Member, 
+    children: [
+      { path: 'list', component: List },
+      { path: 'profile', component: Profile },
+      { path: 'test/:id', component: Test },
+    ]},
    { path: '**', component: Pagenotfound },
 ];

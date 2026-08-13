@@ -1,4 +1,25 @@
-<p>member works!</p>
-<button class="btn btn-primary" routerLink="/member/list">List Members</button>
-<button class="btn btn-primary" routerLink="/member/profile">Member Profile</button>
+<!-- แก้ไขจุดที่ 1: เปลี่ยนเป็นปีกกาคู่ {{ }} -->
+<p>member works! {{ appData.members[0]?.fullname }}</p>
+
+<div class="d-flex gap-2 mb-3">
+  
+  <!-- กลุ่มที่ 1: สีน้ำเงิน -->
+  <button class="btn btn-primary" routerLink="/member/list">List Members</button>
+  <button class="btn btn-primary" routerLink="/member/profile">Member Profile</button>
+  <button class="btn btn-primary" routerLink="/member/test/321" [queryParams]="{ userId: 11111, fullname: 'TADA' }">Test Param</button>
+  
+  <!-- กลุ่มที่ 2: สีเขียว (แก้ไขจุดที่ 2: เปลี่ยน ml-4 เป็น ms-4 เพื่อให้เว้นระยะห่างขยับกลุ่ม) -->
+  <button class="btn btn-success ms-4" (click)="changePage1()">List Members (Fn)</button>
+  <button class="btn btn-success" (click)="changePage2()">Member Profile (Fn)</button>
+  <button class="btn btn-success" (click)="changePage3(123, 99999, 'TADA')">Test Component (Fn)</button>
+
+  <!-- กลุ่มปุ่มจัดการข้อมูล (แก้ไขจุดที่ 2: เปลี่ยน ml-4 เป็น ms-4 เพื่อแยกกลุ่มปุ่มจัดการข้อมูล) -->
+  <button class="btn btn-warning ms-4" (click)="addMember()">Change App Data</button>
+  <button class="btn btn-info" (click)="addMemberSession()">Add Member Session</button>
+  <button class="btn btn-info" (click)="addMemberLocal()">Add Member Local</button>
+
+  <button class="btn btn-danger mt-4" (click)="clearAllMembersSession()">Clear All Members Session</button>
+  <button class="btn btn-danger mt-4" (click)="clearAllMembersLocal()">Clear All Members Local</button>
+</div>
+
 <router-outlet></router-outlet>
