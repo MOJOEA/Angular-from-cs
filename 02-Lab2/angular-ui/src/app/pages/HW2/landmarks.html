@@ -21,7 +21,7 @@
     <div class="grid grid-cols-1 gap-4 mt-4 px-4 max-w-5xl mx-auto">
       @for (landmark of landmarkData(); track $index) {
         <div class="card card-side bg-base-100 shadow-xl w-full">
-          <!-- ฝั่งซ้าย: รูปภาพสถานที่ท่องเที่ยว ล็อกสัดส่วนด้วย w-1/3 หรือ w-96 -->
+          <!-- ฝั่งซ้าย: รูปภาพสถานที่ท่องเที่ยว-->
           <figure class="w-1/3 min-w-[200px]">
             <img [src]="landmark.url" alt="Landmark Image" class="w-full h-full object-cover" />
           </figure>

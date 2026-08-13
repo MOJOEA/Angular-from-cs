@@ -19,6 +19,6 @@ import { Landmarks } from './pages/HW2/landmarks';
 })
 export class App {
   protected readonly title = signal('angular-ui');
-  faCoffee = faCoffee; // ประกาศตัวแปรเพื่อนำไปใช้ใน HTML
+  faCoffee = faCoffee;
   faUser = faUser;
 }

@@ -14,18 +14,19 @@ export class Landmarks {
 
   options = [...new Set(jsonData.map(item => item.country))];
 
-  loadLandmarks() {
-    this.landmarkData.set(this.landmarks);
-  }
-
   constructor() {
     console.log(this.landmarks);
+  }
+
+  // ฟังก์ชันสำหรับโหลดข้อมูลสถานที่ท่องเที่ยวทั้งหมด
+  loadLandmarks() {
+    this.landmarkData.set(this.landmarks);
   }
 
   // ฟังก์ชันสำหรับค้นหาสถานที่ท่องเที่ยวตาม ID
   findOne(id: HTMLInputElement) {
     if (!id.value) {
-      this.landmarkData.set(this.landmarks);
+      this.loadLandmarks();
       return;
     }
     const landmark = this.landmarks.find((l) => l.idx === Number(id.value));

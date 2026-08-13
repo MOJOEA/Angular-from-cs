@@ -9,7 +9,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.css',
 })
 export class Header {
-  // สเตตเก็บสถานะการเปิด/ปิดเมนูดรอปดาวน์ของปุ่ม Home
   isDropdownOpen: boolean = false;
 
   // ฟังก์ชันคลิกเพื่อเปิด-ปิดดรอปดาวน์
@@ -17,7 +16,7 @@ export class Header {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
-  // ฟังก์ชันปิดดรอปดาวน์ทันทีเมื่อยูสเซอร์กดเปลี่ยนหน้าไปแล้ว
+  // ฟังก์ชันปิดดรอปดาวน์ทันทีเมื่อเปลี่ยนหน้าไปแล้ว
   closeDropdown(): void {
     this.isDropdownOpen = false;
   }
