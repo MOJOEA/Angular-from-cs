@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-call-api": {
+    "angular-Calling": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -26,6 +26,7 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ]
           },
@@ -57,10 +58,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-call-api:build:production"
+              "buildTarget": "angular-Calling:build:production"
             },
             "development": {
-              "buildTarget": "angular-call-api:build:development"
+              "buildTarget": "angular-Calling:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,3 +73,4 @@
     }
   }
 }
+
